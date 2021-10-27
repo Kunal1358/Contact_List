@@ -1,0 +1,77 @@
+<html>
+    <head>
+        
+    <title>
+        <%= title %>
+    </title>
+
+    <script src="https://kit.fontawesome.com/3e77aa9250.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/home.css"> 
+
+
+    </head>
+
+
+    <body>
+        <h1 id="page-heading">
+            <i class="fas fa-address-book"></i>
+            My Contact List
+         </h1>
+
+         <div id="contact-list-container">
+            <ul>
+                    <% for(let i of Contacts) {%>
+
+                        <!-- List items -->
+                        <li class="contact">
+                            <div class ="details">
+                                <p> <%= i.name %> </p>
+                                <p> <%= i.phone %> </p>
+                            </div>
+
+                            <!-- delete icon -->
+                            <div class="delete">
+                                <a href="/delete-contact/?phone=<%= i.phone %>">
+                                    <i class="fas fa-window-close fa-2x"> </i>
+                                    <!-- <i class="fas fa-camera fa-10x"></i> -->
+                                </a> 
+                            
+                            </div>
+
+                        </li>
+                    <% } %>
+            </ul>
+         </div>
+
+
+        <div id="myform">
+            <form action="/contact-list" method="POST" >
+
+                <input type="text" id="input1" name="name" placeholder="Enter Name" required>
+                <input type="number" id="input2" name="phone" placeholder="Enter Number" pattern="[0-9]{10}" required>
+                <button type="submit" id="add-button"> Add </button>
+
+            </form>
+        </div>
+
+        
+        <!-- <script src="/assets/js/home.js"></script> -->
+        <script src="/js/home.js"></script>
+
+        <div id="copyright">
+            <p>
+                <span>
+                    <!-- <i class="fas fa-copyright"> </i> -->
+                    &copy;
+                </span> 
+                &nbsp;
+                <span>
+                    <i class="fa fa-github" aria-hidden="true"></i> 
+               </span> /Kunal1358 &nbsp; 
+               All rights reserved.  
+            </p>
+        </div>
+
+    </body>
+</html>
