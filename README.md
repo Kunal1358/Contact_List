@@ -35,6 +35,5 @@ node index.js
 
 ## Authors
 
-Kunal
-Contact [@Kunal](https://github.com/Kunal1358)
+[Kunal](https://github.com/Kunal1358)
 
