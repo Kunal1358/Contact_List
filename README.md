@@ -1,6 +1,6 @@
 # Phone Book
 
-A siple phone book application.
+A simple phonebook application.
 
 ![screenshotImage](Screenshots/contactList.jpg)
 
